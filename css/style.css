@@ -337,10 +337,17 @@ section[id] {
 .btn-secondary {
   background: var(--accent-color);
   color: var(--text-main);
+  color: #111827;
 }
 
 .btn-secondary:hover {
   background: var(--text-light);
+  color: var(--bg-dark);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
 }
 
 /* ********** CARRUSEL ********** */
