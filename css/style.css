@@ -151,6 +151,8 @@ section[id] {
 .navbar {
   background: var(--bg-dark);
   color: var(--text-light);
+  border-bottom: 2.5px solid var(--border-color);
+
   top: 0;
   z-index: 999;
   padding: 1rem;
@@ -435,7 +437,6 @@ section[id] {
   font-weight: 900;
   text-transform: uppercase;
   color: var(--accent-color);
-
 }
 
 .about h2 {
@@ -545,6 +546,92 @@ section[id] {
   .experience-card {
     width: 40%;
     min-height: 350px;
+  }
+
+}
+
+/* ********** SERVICES ********** */
+.services {
+  background: var(--bg-dark);
+  padding: 3rem 1rem;
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  color: var(--text-light);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+
+
+.services .section-tag {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: clamp(.9rem, 1.5vw, 1.1rem);
+}
+
+/* CARDS */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+}
+
+.service-card {
+  background: var(--bg-surface);
+  color: var(--text-main);
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.service-card h3 {
+  color: var(--accent-color);
+  margin-bottom: .8rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .services-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+
+  .service-card {
+
+    flex: 1 1 calc(33.333% - 1rem);
+
   }
 
 }
