@@ -503,7 +503,23 @@ section[id] {
   font-weight: 600;
 } 
 
-/* TABLET / DESKTOP */
+/* TABLET */
+@media (min-width: 768px) {
+
+  .about-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .about-list li {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+}
+
+/* DESKTOP */
 @media (min-width: 1024px) {
   .about .container {
     flex-direction: row;
@@ -513,6 +529,17 @@ section[id] {
 
   .about-content {
     width: 60%;
+  }
+
+  .about-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .about-list li {
+    flex: 1 1 calc(50% - 1rem);
   }
 
   .experience-card {
